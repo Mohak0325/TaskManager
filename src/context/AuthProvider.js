@@ -8,7 +8,6 @@ function AuthProvider({children}) {
         employees : "",
         admin: ""
     });
-    // console.log(userData)
 
     useEffect(() => {
         const {employees , admin} = getLocalStorage();
