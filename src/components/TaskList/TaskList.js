@@ -10,16 +10,16 @@ function TaskList({data}) {
             {data.tasks.map((elem , index) => {
 
                 if(elem.active) {
-                    return <AcceptTask key={index}/>
+                    return <AcceptTask key={index} data={elem}/>
                 }
                 if(elem.newTask) {
-                    return <NewTask key={index}/>
+                    return <NewTask key={index} data={elem}/>
                 }
                 if(elem.completed) {
-                    return <CompleteTask key={index}/>
+                    return <CompleteTask key={index} data={elem}/>
                 }
                 if(elem.failed) {
-                    return <Failed key={index}/>
+                    return <Failed key={index} data={elem}/>
                 }
             })}
         </div>
