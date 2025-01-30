@@ -14,7 +14,7 @@ function App() {
    
   const [user , setUser] = useState(null);
   const [loggedInUserData , setloggedInUserdata] = useState(null);
-  const data = useContext(AuthContext);
+  const [data , setUserData] = useContext(AuthContext);
 
   useEffect( () => {
     const loggedInUser = localStorage.getItem("loggedInUser");
@@ -27,23 +27,26 @@ function App() {
   } , []);
 
   function handleLogin(email , password) {
-
-    if(email === 'admin@me.com' && password === '123') {
-      setUser('admin')
-      localStorage.setItem('loggedInUser' , JSON.stringify({role : 'admin'}));
-    }
-
-    else if(data) {
+    if(data && data.admin && data.employees) {
+      const admin = data.admin.find((e) => email === e.email && password === e.password);
       const employee = data.employees.find((e) => email === e.email && password === e.password);
-      if(employee) {
+
+      if(admin){
+        setUser('admin');
+        setloggedInUserdata(admin);
+        localStorage.setItem('loggedInUser' , JSON.stringify({role : 'admin' , data:admin}));
+      }
+      else if(employee) {
         setUser('employee');
         setloggedInUserdata(employee);
         localStorage.setItem('loggedInUser' , JSON.stringify({role : 'employee' , data:employee}));
       }
-    } 
-
+      else{
+        alert("Invalid Credentials");
+      }
+    }
     else{
-      alert("Invalid Credentials");
+      alert("Data Not Found");
     }
   }
 
@@ -55,7 +58,7 @@ function App() {
      {
       !user ? 
       <Login handleLogin={handleLogin}/> : 
-       user === 'admin' ? <AdminDashboard/> : <EmployessDashboard loggedInData={loggedInUserData}/> 
+       user === 'admin' ? <AdminDashboard changeUser={setUser}loggedInData={loggedInUserData}/> : <EmployessDashboard changeUser={setUser} loggedInData={loggedInUserData}/> 
      }
     </>
   );

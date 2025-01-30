@@ -1,10 +1,11 @@
 import React from 'react'
 
-function Header({data}) {
+function Header({data , changeUser}) {
 
     function handleLogout() {
         localStorage.setItem('loggedInUser' , '');
-        window.location.reload();
+        // window.location.reload();
+        changeUser('');
     }
 
     return (
