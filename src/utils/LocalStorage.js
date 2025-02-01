@@ -6,9 +6,9 @@ const employees = [
         "name" : "Aakash" ,
         "taskCount" : {
             "active": 2,
-            "newTask": 1,
+            "newTask": 0,
             "failed": 0,
-            "completed": 2,
+            "completed": 1,
         } ,
         "tasks": [
           {
@@ -23,9 +23,9 @@ const employees = [
           },
           {
             "active": false,
-            "newTask": true,
+            "newTask": false,
             "failed": false,
-            "completed": false,
+            "completed": true,
             "title": "Update client database",
             "description": "Add new client details to the CRM system.",
             "date": "2025-01-16",
@@ -50,7 +50,7 @@ const employees = [
         "name" : "Abhay" ,
         "taskCount" : {
             "active": 1,
-            "newTask": 2,
+            "newTask": 0,
             "failed": 1,
             "completed": 1,
         } ,
@@ -67,9 +67,9 @@ const employees = [
           },
           {
             "active": false,
-            "newTask": true,
+            "newTask": false,
             "failed": false,
-            "completed": false,
+            "completed": true,
             "title": "Conduct code review",
             "description": "Review the code submitted by the development team.",
             "date": "2025-01-16",
@@ -93,17 +93,17 @@ const employees = [
         "password": "123",
         "name" : "Vijay" ,
         "taskCount" : {
-            "active": 2,
+            "active": 0,
             "newTask": 0,
             "failed": 1,
             "completed": 2,
         } ,
         "tasks": [
           {
-            "active": true,
+            "active": false,
             "newTask": false,
             "failed": false,
-            "completed": false,
+            "completed": true,
             "title": "Organize team meeting",
             "description": "Schedule and conduct a team meeting to discuss goals.",
             "date": "2025-01-17",
@@ -111,8 +111,8 @@ const employees = [
           },
           {
             "active": false,
-            "newTask": true,
-            "failed": false,
+            "newTask": false,
+            "failed": true,
             "completed": false,
             "title": "Audit financial records",
             "description": "Perform an audit of last quarter's financial transactions.",
@@ -120,10 +120,10 @@ const employees = [
             "category": "Finance"
           },
           {
-            "active": true,
+            "active": false,
             "newTask": false,
-            "failed": true,
-            "completed": false,
+            "failed": false,
+            "completed": true,
             "title": "Update security policies",
             "description": "Review and update the organization's security protocols.",
             "date": "2025-01-14",
@@ -139,13 +139,13 @@ const employees = [
         "taskCount" : {
             "active": 3,
             "newTask": 0,
-            "failed": 1,
-            "completed": 1,
+            "failed": 0,
+            "completed": 0,
         } ,
         "tasks": [
           {
             "active": true,
-            "newTask": true,
+            "newTask": false,
             "failed": false,
             "completed": false,
             "title": "Prepare event schedule",
@@ -157,16 +157,16 @@ const employees = [
             "active": true,
             "newTask": false,
             "failed": false,
-            "completed": true,
+            "completed": false,
             "title": "Design new brochure",
             "description": "Create a new brochure for the marketing campaign.",
             "date": "2025-01-15",
             "category": "Marketing"
           },
           {
-            "active": false,
+            "active": true,
             "newTask": false,
-            "failed": true,
+            "failed": false,
             "completed": false,
             "title": "Resolve customer complaints",
             "description": "Address the complaints raised by customers in the last week.",
@@ -181,14 +181,14 @@ const employees = [
         "password": "123",
         "name" : "Samay" ,
         "taskCount" : {
-            "active": 1,
+            "active": 0,
             "newTask": 1,
-            "failed": 2,
+            "failed": 1,
             "completed": 1,
         } ,
         "tasks": [
           {
-            "active": true,
+            "active": false,
             "newTask": true,
             "failed": false,
             "completed": false,
@@ -198,7 +198,7 @@ const employees = [
             "category": "Testing"
           },
           {
-            "active": true,
+            "active": false,
             "newTask": false,
             "failed": false,
             "completed": true,
