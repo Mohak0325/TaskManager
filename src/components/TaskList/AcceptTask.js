@@ -8,7 +8,6 @@ function AcceptTask({task , data}) {
     const [userData , setUserData] = useContext(AuthContext);
     const employeeData = userData.employees;
 
-
     function handleCompleteTask() {
         Array.isArray(employeeData) && employeeData.forEach((elem) => {
             if(data.name === elem.name) {

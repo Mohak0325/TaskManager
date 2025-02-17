@@ -31,4 +31,4 @@ function AllTask() {
     )
 }
 
-export default AllTask
+export default AllTask;

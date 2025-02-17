@@ -16,7 +16,7 @@ function Login({handleLogin}) {
     }
     function handleSubmit(event) {
         event.preventDefault();
-        // console.log(formData);
+        
         handleLogin(formData.email , formData.password);
         setFormData({
             email:'' ,

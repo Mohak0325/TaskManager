@@ -18,7 +18,6 @@ function AuthProvider({children}) {
         // const admin = data.admin;
     } , []);
 
-
     return (
         <div>
             <AuthContext.Provider value={[userData , setUserData]}>

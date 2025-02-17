@@ -23,4 +23,4 @@ function TaskListNumber({data}) {
     )
 }
 
-export default TaskListNumber
+export default TaskListNumber;

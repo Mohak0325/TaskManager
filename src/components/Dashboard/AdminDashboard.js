@@ -8,8 +8,7 @@ function AdminDashboard({loggedInData , changeUser}) {
         <div className='h-screen w-full px-10 py-4'>
             <Header data={loggedInData} changeUser={changeUser}/>
             <CreateTask/>
-            <AllTask/>
-            
+            <AllTask/> 
         </div>
     )
 }

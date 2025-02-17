@@ -17,4 +17,4 @@ function Header({data , changeUser}) {
     )
 }
 
-export default Header
+export default Header;

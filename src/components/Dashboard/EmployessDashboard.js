@@ -15,4 +15,4 @@ function EmployessDashboard({loggedInData , changeUser}) {
     )
 }
 
-export default EmployessDashboard
+export default EmployessDashboard;
