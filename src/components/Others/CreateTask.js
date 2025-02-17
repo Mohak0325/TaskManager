@@ -45,6 +45,8 @@ function CreateTask() {
             assignTo:'',
             category:'',
         })
+        
+        setAssignTo('');
     }
     function handleChange(e) {
         setTaskData({
